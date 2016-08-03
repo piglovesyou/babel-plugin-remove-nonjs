@@ -1,4 +1,4 @@
-# babel-plugin-remove-nonjs
+# babel-plugin-remove-nonjs [![Build Status](https://travis-ci.org/piglovesyou/babel-plugin-remove-nonjs.svg?branch=master)](https://travis-ci.org/piglovesyou/babel-plugin-remove-nonjs)
 
 Simply removes non-JS `require()` such as `require('./style.css')`, possibly resolved by Webpack with with its ExtractTextPlugin.
 
