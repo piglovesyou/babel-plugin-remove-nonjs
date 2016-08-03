@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "0.1.0",
   "name": "babel-plugin-remove-nonjs",
   "description": "Babel plugin to remove dependencies of non JS files such as CSS and images",
   "repository": "piglovesyou/babel-plugin-remove-nonjs",
