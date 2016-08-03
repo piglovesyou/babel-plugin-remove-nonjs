@@ -1,12 +1,6 @@
 # babel-plugin-remove-nonjs
 
-Removes non-js require such as "require('./style.css')" possibly resolved by Webpack.
-
-## Why
-
-For server-side rendering of your components. Assume you wrote a React component with CSS dependency and you want to use it in server-side rendering. In a simple case, you may just want to remove CSS requiring since JavaScript in a process of server-side cannot handle non-JS dependency. In the case, CSS is just OK to be extracted by [extract text plugin](https://github.com/webpack/extract-text-webpack-plugin#usage-example-with-css) and fetch it from html `<head>`.
-
-If you're looking for a more integrated solution, try [isomorphic-style-loader](https://github.com/kriasoft/isomorphic-style-loader).
+Simply removes non-JS `require()` such as `require('./style.css')`, possibly resolved by Webpack with with its ExtractTextPlugin.
 
 ## Example
 
@@ -26,6 +20,14 @@ It simply removes non-JS dependency.
 ```sh
 $ npm install --save-dev babel-plugin-remove-nonjs
 ```
+
+## Note
+
+Because it also removes valiable declarations like `const style = require('./style.css')`, your code CANNOT depend on a returned value of the module.
+
+If you want scoped CSS, try [css-loader](https://github.com/webpack/css-loader).
+
+If you're looking for a more integrated solution of CSS, try [isomorphic-style-loader](https://github.com/kriasoft/isomorphic-style-loader).
 
 ## License
 
