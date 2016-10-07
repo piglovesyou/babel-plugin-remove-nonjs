@@ -35,5 +35,8 @@
     "webpack",
     "remove"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-transform-flow-strip-types": "^6.14.0"
+  }
 }
